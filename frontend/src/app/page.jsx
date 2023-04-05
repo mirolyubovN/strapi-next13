@@ -4,26 +4,26 @@ import { getClient } from "@/lib/client";
 import { gql } from "@apollo/client";
 
 const query = gql`
-  query GetReviews {
-    reviews {
-      data {
-        id
-        attributes {
-          title
-          body
-          rating
-          categories {
-            data {
-              id
-              attributes {
-              	name
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+	query GetReviews {
+		reviews {
+		data {
+			id
+			attributes {
+			title
+			body
+			rating
+			categories {
+				data {
+				id
+				attributes {
+					name
+				}
+				}
+			}
+			}
+		}
+		}
+	}
 `;
 
 export default async function Home() {

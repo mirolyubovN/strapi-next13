@@ -3,127 +3,130 @@
 $purple: #8e2ad6;
 
 body {
-  font-family: "Poppins";
-  background: #f1f1f1;
+	font-family: "Poppins";
+	background: #f1f1f1;
 }
 
-h1,h2,h3,h4 {
-  font-weight: 500;
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 500;
 }
 
 .App {
-  font-size: 1.2em;
-  margin: 10px auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px;
-  box-sizing: border-box;
+	font-size: 1.2em;
+	margin: 10px auto;
+	width: 100%;
+	max-width: 1200px;
+	padding: 20px;
+	box-sizing: border-box;
 }
 
 a {
-  text-decoration: none;
-  color: $purple;
+	text-decoration: none;
+	color: $purple;
 }
 
 .header {
-  font-size: 1.5em;
-  color: $purple;
-  padding-bottom: 10px;
-  position: relative;
-  border-bottom: 2px solid $purple;
-  transition: all .25s ease-in-out;
+	font-size: 1.5em;
+	color: $purple;
+	padding-bottom: 10px;
+	position: relative;
+	border-bottom: 2px solid $purple;
+	transition: all .25s ease-in-out;
 }
 
 .review-card {
-  background: white;
-  margin: 60px auto;
-  padding: 20px 20px 20px 90px;
-  position: relative;
+	background: white;
+	margin: 60px auto;
+	padding: 20px 20px 20px 90px;
+	position: relative;
 
-  &__body,
-  &__title {
-    margin-bottom: 20px;
-    letter-spacing: .2px;
-  }
+	&__body,
+	&__title {
+		margin-bottom: 20px;
+		letter-spacing: .2px;
+	}
 
-  &__rating {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    background: $purple;
-    font-size: 3em;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
+	&__rating {
+		position: absolute;
+		top: -20px;
+		left: -20px;
+		background: $purple;
+		font-size: 3em;
+		width: 80px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+	}
 
-  &__title {
-    font-weight: bold;
-    font-size: 1.2em;
-  }
+	&__title {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
 
-  a {
-    position: relative;
+	a {
+		position: relative;
 
-    &:after {
-      content: '';
-      width: 100%;
-      transform: scaleX(0);
-      bottom: -2px;
-      left: 0;
-      height: 2px;
-      background-color: $purple;
-      position: absolute;
-      transition: transform .25s ease-out;
-      transform-origin: bottom right;
-    }
+		&:after {
+			content: '';
+			width: 100%;
+			transform: scaleX(0);
+			bottom: -2px;
+			left: 0;
+			height: 2px;
+			background-color: $purple;
+			position: absolute;
+			transition: transform .25s ease-out;
+			transform-origin: bottom right;
+		}
 
-    &:hover:after {
-      transform-origin: bottom left;
-      transform: scaleX(1);
-    }
-  }
+		&:hover:after {
+			transform-origin: bottom left;
+			transform: scaleX(1);
+		}
+	}
 }
 
 .categories {
-  margin-top: 20px;
-  text-align: right;
+	margin-top: 20px;
+	text-align: right;
 
-  a {
-    padding: 0 5px;
-    position: relative;
+	a {
+		padding: 0 5px;
+		position: relative;
 
-    &:after {
-      content: '';
-      width: 100%;
-      transform: scaleX(0);
-      bottom: -2px;
-      left: 0;
-      height: 2px;
-      background-color: $purple;
-      position: absolute;
-      transition: transform .25s ease-out;
-      transform-origin: bottom right;
-    }
+		&:after {
+			content: '';
+			width: 100%;
+			transform: scaleX(0);
+			bottom: -2px;
+			left: 0;
+			height: 2px;
+			background-color: $purple;
+			position: absolute;
+			transition: transform .25s ease-out;
+			transform-origin: bottom right;
+		}
 
-    &:hover:after {
-      transform-origin: bottom left;
-      transform: scaleX(1);
-    }
-  }
+		&:hover:after {
+			transform-origin: bottom left;
+			transform: scaleX(1);
+		}
+	}
 }
 
 .category-header {
-  font-size: 1.5em;
-  color: $purple;
-  font-weight: bold;
+	font-size: 1.5em;
+	color: $purple;
+	font-weight: bold;
 }
 
 .category-meta {
-  font-size: 14px;
-  color: darkgray;
-  margin-bottom: 20px;
+	font-size: 14px;
+	color: darkgray;
+	margin-bottom: 20px;
 }

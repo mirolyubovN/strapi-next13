@@ -3,39 +3,36 @@ import { gql } from "@apollo/client";
 import ReactMarkdown from 'react-markdown';
 
 const REVIEW = gql`
-query GetReview($id: ID!) {
-  review(id: $id) {
-    data {
-      id
-      attributes {
-        title,
-        rating,
-        body,
-        categories {
-          data {
-            id
-            attributes {
-              name
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`;
+	query GetReview($id: ID!) {
+	review(id: $id) {
+		data {
+		id
+		attributes {
+			title,
+			rating,
+			body,
+			categories {
+			data {
+				id
+				attributes {
+				name
+				}
+			}
+			}
+		}
+		}
+	}
+	}
+	`;
 
 export default async function ReviewDetails({ params }) {
 	const client = getClient();
-	console.log(params, 'params');
 	const { data } = await client.query({
 		query: REVIEW,
 		variables: {
 			id: params.id
 		}
 	});
-
-	console.log(data, 'data');
 	const actualData = data.review.data.attributes;
 
 	return (

@@ -16,10 +16,8 @@ const query = gql`
 `;
 export default async function Header() {
 	const client = getClient();
-	const { data } = await client.query({query});
+	const { data } = await client.query({ query });
 	const actualData = data.categories.data;
-
-	console.log(actualData);
 
 	return (
 		<>
